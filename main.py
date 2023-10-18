@@ -15,7 +15,7 @@ if __name__ == '__main__':
     if eco_media >= 8.0:
         c5.text("AP")
     else:
-        nota_minima_prova_final_eco = (15 - (eco_media * 2)) / 3
+        nota_minima_prova_final_eco = (15 - (eco_media * 2))
         if nota_minima_prova_final_eco >= 10.0:
             c5.text("RP")
         else:
@@ -39,7 +39,7 @@ if __name__ == '__main__':
     if dir_media >= 8.0:
         c9.text("AP")
     else:
-        nota_minima_prova_final_dir = (15 - (dir_media * 2)) / 3
+        nota_minima_prova_final_dir = (15 - (dir_media * 2))
         if nota_minima_prova_final_dir >= 10.0:
             c9.text("RP")
         else:
@@ -61,7 +61,7 @@ if __name__ == '__main__':
     if ges_media >= 8.0:
         c14.text("AP")
     else:
-        nota_minima_prova_final_ges = (15 - (ges_media * 2)) / 3
+        nota_minima_prova_final_ges = (15 - (ges_media * 2))
         if nota_minima_prova_final_ges >= 10.0:
             c14.text("RP")
         else:
@@ -82,7 +82,7 @@ if __name__ == '__main__':
     if mol_media >= 8.0:
         c19.text("AP")
     else:
-        nota_minima_prova_final_mol = (15 - (mol_media * 2)) / 3
+        nota_minima_prova_final_mol = (15 - (mol_media * 2))
         if nota_minima_prova_final_mol >= 10.0:
             c19.text("RP")
         else:
@@ -91,20 +91,21 @@ if __name__ == '__main__':
             else:
                 c19.write(nota_minima_prova_final_mol)
     st.divider()
-    st.subheader("REDES DE COMPUTADORES (MEE = (P1 + TP1 + P2 + TP2) / 4)")
-    c20, c21, c22, c23, c24, c25 = st.columns(6)
+    st.subheader("REDES DE COMPUTADORES (MEE = (P1 + TP1 + P2 + TP2 + Q1) / 5)")
+    c20, c21, c22, c23, c36, c24, c25 = st.columns(7)
     red_nota1 = c20.number_input('Nota1', 0.0, 10.0, key='red1')
     red_nota2 = c21.number_input('Nota2', 0.0, 10.0, key='red2')
     red_nota3 = c22.number_input('Nota3', 0.0, 10.0, key='red3')
     red_nota4 = c23.number_input('Nota4', 0.0, 10.0, key='red4')
-    red_media = (red_nota4+red_nota3+red_nota2+red_nota1)/4
+    red_nota5 = c36.number_input('Nota5', 0.0, 10.0, key='red5')
+    red_media = (red_nota4+red_nota3+red_nota2+red_nota1+red_nota5)/5
     c24.write("Media")
     c24.write(red_media)
     c25.write("Prova Final(Min)")
     if red_media >= 8.0:
         c25.text("AP")
     else:
-        nota_minima_prova_final_red = (15 - (red_media * 2)) / 3
+        nota_minima_prova_final_red = (15 - (red_media * 2))
         if nota_minima_prova_final_red >= 10.0:
             c25.text("RP")
         else:
@@ -125,7 +126,7 @@ if __name__ == '__main__':
     if mod_media >= 8.0:
         c30.text("AP")
     else:
-        nota_minima_prova_final_mod = (15 - (mod_media * 2)) / 3
+        nota_minima_prova_final_mod = (15 - (mod_media * 2))
         if nota_minima_prova_final_mod >= 10.0:
             c30.text("RP")
         else:
@@ -147,7 +148,7 @@ if __name__ == '__main__':
     if alg_media >= 8.0:
         c35.text("AP")
     else:
-        nota_minima_prova_final_alg = (15 - (alg_media * 2)) / 3
+        nota_minima_prova_final_alg = (15 - (alg_media * 2))
         if nota_minima_prova_final_alg >= 10.0:
             c35.text("RP")
         else:
