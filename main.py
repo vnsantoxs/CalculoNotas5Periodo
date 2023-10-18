@@ -133,3 +133,25 @@ if __name__ == '__main__':
                 c30.text("AP MF=5")
             else:
                 c30.write(nota_minima_prova_final_mod)
+
+    st.divider()
+    st.subheader("ÁLGEBRA LINEAR  (MEE = (EE1 + EE2 + EE3) / 3)")
+    c31, c32, c33, c34, c35 = st.columns(5)
+    alg_nota1 = c31.number_input('Nota1', 0.0, 10.0, key='alg1')
+    alg_nota2 = c32.number_input('Nota2', 0.0, 10.0, key='alg2')
+    alg_nota3 = c33.number_input('Nota3', 0.0, 10.0, key='alg3')
+    alg_media = (alg_nota1 + alg_nota2 + alg_nota3) / 3
+    c34.write("Media")
+    c34.write(alg_media)
+    c35.write("Prova Final(Min)")
+    if alg_media >= 8.0:
+        c35.text("AP")
+    else:
+        nota_minima_prova_final_alg = (15 - (alg_media * 2)) / 3
+        if nota_minima_prova_final_alg >= 10.0:
+            c35.text("RP")
+        else:
+            if nota_minima_prova_final_alg == 0:
+                c35.text("AP MF=5")
+            else:
+                c35.write(nota_minima_prova_final_alg)
